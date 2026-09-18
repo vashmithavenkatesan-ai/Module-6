@@ -1,50 +1,47 @@
-# 🐍 Python OOP: Operator Overloading (Less Than `<`)
+# 🐍 Python OOP: Encapsulation with Private Members
 
 ## 🎯 AIM
 
-To write a Python program that demonstrates **operator overloading** by overloading the **less than (`<`)** operator using a custom class.
+To implement **Encapsulation** in Python by defining a class `Rectangle` with **private member variables** `__length` and `__breadth`.
 
 ---
 
 ## 🧠 ALGORITHM
 
-1. **Create Class `A`**:
-   - Define the `__init__()` method to initialize the object with a value `a`.
+1. **Define the Class**:
+   - Create a class `Rectangle` with two private attributes: `__length` and `__breadth`.
 
-2. **Overload the `<` Operator**:
-   - Define the `__lt__()` method with logic:
-     - If `self.a < o.a`, return `"ob1 is less than ob2"`
-     - Else, return `"ob2 is less than ob1"`
+2. **Initialize Variables**:
+   - Use the `__init__()` constructor to set initial values for `__length` and `__breadth`.
 
-3. **Create Objects**:
-   - Instantiate two objects `ob1` and `ob2` with values.
+3. **Print Values**:
+   - Display the private variables from within the class to demonstrate access.
 
-4. **Use `<` Operator**:
-   - Use `print(ob1 < ob2)` to trigger the overloaded behavior.
+4. **Instantiate the Object**:
+   - Create an object of the `Rectangle` class to trigger the constructor.
 
 ---
 
 ## 💻 Program
 ```python
-class A:
-    def __init__(self,a):
-        self.a=a
-    def __gt__(self,other):
-        return self.a > other.a
-        
-ob1=A(20)
-ob2=A(3)
-
-if ob1>ob2:
-    print("ob2 is less than ob1")
-else:
-    print("ob1 is less than or equal to ob2")
+class Rectangle:
+    __length = 0
+    __breadth = 0
+    def __init__(self,length,breadth):
+        self.__length = 5
+        self.__breadth = 3
+    def show(self):
+        print(self.__length)
+        print(self.__breadth)
+            
+rect = Rectangle(5,3)
+rect.show()
 
 ```
 
 ## Output
-![image](https://github.com/user-attachments/assets/a8fc95af-05ed-48c8-bf37-e40e7aec16b4)
+![image](https://github.com/user-attachments/assets/31119647-b613-4053-86f7-568fa4d5fba2)
 
 
 ## Result
-Thus, python program that demonstrates **operator overloading** by overloading the **less than (`<`)** operator using a custom class is executed successfully.
+Thus,defining a class `Rectangle` with **private member variables** `__length` and `__breadth` is executed successfully.
